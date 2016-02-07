@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Set the base href -->
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shailender Portfolio</title>
+    
+    <!--Bootstrap CSS libraries-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2.dev.js"></script>
+    
+    <!-- Add the router library -->
+    <script src="https://code.angularjs.org/2.0.0-beta.2/router.dev.js"></script>
+    
+    <!--Bootstrap javascript libraries-->
+     <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'ts'}} 
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+  <body>
+      <div class="container m-t-5 h-b-g">
+          <div class="row">
+             <my-app>loading...</my-app> 
+          </div>
+      </div>
+  </body>
+
+</html>
+
+
+<!-- Copyright 2016 Shailender Singh. All Rights Reserved. Only used for learning purpose.-->
